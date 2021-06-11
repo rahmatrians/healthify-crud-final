@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:healthify/tips_detail.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import './tips_add.dart';
@@ -68,7 +69,7 @@ class _ItemListState extends State<ItemList> {
           child: new GestureDetector(
             onTap: () => Navigator.of(context).push(new MaterialPageRoute(
                 builder: (BuildContext context) =>
-                    new MakananDetail(list: widget.list, index: i))),
+                    new TipsDetail(list: widget.list, index: i))),
             child: new Card(
               child: Container(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
