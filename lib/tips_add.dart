@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class MakananAdd extends StatefulWidget {
+class TipsAdd extends StatefulWidget {
   @override
-  _MakananAddState createState() => _MakananAddState();
+  _TipsAddState createState() => _TipsAddState();
 }
 
-class _MakananAddState extends State<MakananAdd> {
-  TextEditingController controllerName = new TextEditingController();
+class _TipsAddState extends State<TipsAdd> {
+  TextEditingController controllerTips = new TextEditingController();
   TextEditingController controllerDesc = new TextEditingController();
 
   void AddingData() {
-    http.post(Uri.parse("http://10.0.2.2/healthify/adddata.php"), body: {
-      'nama_makanan': controllerName.text,
+    http.post(Uri.parse("http://10.0.2.2/healthify/tips_adddata.php"), body: {
+      'nama_tips': controllerTips.text,
       'keterangan': controllerDesc.text,
     });
   }
@@ -31,9 +31,9 @@ class _MakananAddState extends State<MakananAdd> {
               new Column(
                 children: [
                   new TextField(
-                    controller: controllerName,
+                    controller: controllerTips,
                     decoration: new InputDecoration(
-                        hintText: "Nama Makanan", labelText: "Nama Makanan"),
+                        hintText: "Nama Tips", labelText: "Nama Tips"),
                   ),
                   new TextField(
                     controller: controllerDesc,

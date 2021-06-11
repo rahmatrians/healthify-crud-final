@@ -5,6 +5,9 @@ import 'dart:convert';
 import './detail.dart';
 import './adddata.dart';
 import './makanan_sehat.dart';
+import './tentang_kami.dart';
+import './info.dart';
+import './tips_sehat.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -38,10 +41,12 @@ class _MyAppState extends State<MyApp> {
         children: [
           SizedBox(height: 30),
           Container(
+            decoration: BoxDecoration(
+                color: Color(0xff1DBAB5),
+                borderRadius: BorderRadius.circular(10)),
             height: 150,
             padding: EdgeInsets.all(10),
             margin: EdgeInsets.all(10),
-            color: Colors.indigo,
             child: new Row(
               children: [
                 Image.asset(
@@ -57,10 +62,18 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         "Hai, Armin",
                         textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
                       ),
+                      SizedBox(height: 5),
                       Text(
                         "Bagaimana kondusu tubuhmu?",
                         textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                       )
                     ],
                   ),
@@ -94,7 +107,7 @@ class _MyAppState extends State<MyApp> {
                               height: 70,
                             ),
                             SizedBox(height: 20),
-                            Text("test satu dua"),
+                            Text("Makanan Sehat"),
                             SizedBox(height: 20),
                           ]),
                         ),
@@ -103,7 +116,7 @@ class _MyAppState extends State<MyApp> {
                         onTap: () => Navigator.of(context).push(
                             new MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    new MakananList())),
+                                    new TipsList())),
                         child: Container(
                           padding: EdgeInsets.all(10),
                           width: 140,
@@ -119,7 +132,7 @@ class _MyAppState extends State<MyApp> {
                               height: 70,
                             ),
                             SizedBox(height: 20),
-                            Text("test satu dua"),
+                            Text("Tips Sehat"),
                             SizedBox(height: 20),
                           ]),
                         ),
@@ -132,7 +145,7 @@ class _MyAppState extends State<MyApp> {
                         onTap: () => Navigator.of(context).push(
                             new MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    new MakananList())),
+                                    new TentangKami())),
                         child: Container(
                           padding: EdgeInsets.all(10),
                           width: 140,
@@ -148,7 +161,7 @@ class _MyAppState extends State<MyApp> {
                               height: 70,
                             ),
                             SizedBox(height: 20),
-                            Text("test satu dua"),
+                            Text("Tentang Kami"),
                             SizedBox(height: 20),
                           ]),
                         ),
@@ -157,7 +170,7 @@ class _MyAppState extends State<MyApp> {
                         onTap: () => Navigator.of(context).push(
                             new MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    new MakananList())),
+                                    new infoLayanan())),
                         child: Container(
                           padding: EdgeInsets.all(10),
                           width: 140,
@@ -173,7 +186,7 @@ class _MyAppState extends State<MyApp> {
                               height: 70,
                             ),
                             SizedBox(height: 20),
-                            Text("test satu dua"),
+                            Text("Info Layanan"),
                             SizedBox(height: 20),
                           ]),
                         ),

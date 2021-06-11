@@ -2,18 +2,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import './makanan_add.dart';
+import './tips_add.dart';
 import 'makanan_detail.dart';
 
-class MakananList extends StatefulWidget {
+class TipsList extends StatefulWidget {
   @override
-  _MakananListState createState() => _MakananListState();
+  _TipsListState createState() => _TipsListState();
 }
 
-class _MakananListState extends State<MakananList> {
+class _TipsListState extends State<TipsList> {
   Future<List> getData() async {
     final response =
-        await http.get(Uri.parse("http://10.0.2.2/healthify/getdata.php"));
+        await http.get(Uri.parse("http://10.0.2.2/healthify/tips_getdata.php"));
     return json.decode(response.body);
   }
 
@@ -23,14 +23,14 @@ class _MakananListState extends State<MakananList> {
       backgroundColor: Colors.grey[200],
       appBar: new AppBar(
         backgroundColor: Color(0xff1DBAB5),
-        title: Text("Makanan Sehat"),
+        title: Text("Tips Sehat"),
       ),
       floatingActionButton: new FloatingActionButton(
           backgroundColor: Color(0xff1DBAB5),
           child: new Icon(Icons.add),
           onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MakananAdd()),
+                MaterialPageRoute(builder: (context) => TipsAdd()),
               ).then((value) => setState(() {
                     getData();
                   }))),
@@ -74,7 +74,7 @@ class _ItemListState extends State<ItemList> {
                 padding: EdgeInsets.only(top: 10, bottom: 10),
                 child: new ListTile(
                   title: new Text(
-                    widget.list[i]['nama_makanan'],
+                    widget.list[i]['nama_tips'],
                     style: TextStyle(
                         color: Color(0xff1DBAB5),
                         fontWeight: FontWeight.bold,

@@ -19,20 +19,17 @@ class _MakananEditState extends State<MakananEdit> {
   void editData() {
     http.post(Uri.parse("http://10.0.2.2/healthify/editdata.php"), body: {
       "id": widget.list[widget.index]['id'],
-      "item_name": controllerDesc.text,
+      "nama_makanan": controllerName.text,
+      "keterangan": controllerDesc.text,
     });
   }
 
   @override
   void initState() {
-    controllerCode = controllerCode =
-        new TextEditingController(text: widget.list[widget.index]['item_code']);
-    controllerName =
-        new TextEditingController(text: widget.list[widget.index]['item_name']);
-    controllerPrice =
-        new TextEditingController(text: widget.list[widget.index]['price']);
-    controllerStock =
-        new TextEditingController(text: widget.list[widget.index]['stock']);
+    controllerName = new TextEditingController(
+        text: widget.list[widget.index]['nama_makanan']);
+    controllerDesc = new TextEditingController(
+        text: widget.list[widget.index]['keterangan']);
     super.initState();
   }
 
@@ -40,7 +37,8 @@ class _MakananEditState extends State<MakananEdit> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text("EDIT DATA"),
+          title: new Text("UBAH DATA"),
+          backgroundColor: Color(0xff1DBAB5),
         ),
         body: Padding(
           padding: EdgeInsets.all(10),
@@ -62,9 +60,9 @@ class _MakananEditState extends State<MakananEdit> {
                     padding: EdgeInsets.all(10),
                   ),
                   new RaisedButton(
-                      child: Text("Simpan"),
+                      child: Text("SIMPAN"),
                       onPressed: () {
-                        AddingData();
+                        editData();
                         Navigator.pop(context);
                       })
                 ],
