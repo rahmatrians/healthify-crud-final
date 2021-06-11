@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthify/tips_detail.dart';
 import 'package:http/http.dart' as http;
 import './main.dart';
 
@@ -63,7 +64,12 @@ class _TipsEditState extends State<TipsEdit> {
                       child: Text("SIMPAN"),
                       onPressed: () {
                         editData();
-                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyApp(),
+                          ),
+                        );
                       })
                 ],
               ),

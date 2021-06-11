@@ -8,6 +8,7 @@ import './makanan_sehat.dart';
 import './tentang_kami.dart';
 import './info.dart';
 import './tips_sehat.dart';
+import './akun.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -40,45 +41,49 @@ class _MyAppState extends State<MyApp> {
       body: Column(
         children: [
           SizedBox(height: 30),
-          Container(
-            decoration: BoxDecoration(
-                color: Color(0xff1DBAB5),
-                borderRadius: BorderRadius.circular(10)),
-            height: 150,
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
-            child: new Row(
-              children: [
-                Image.asset(
-                  "images/profilePict.png",
-                  height: 70,
-                ),
-                Padding(padding: EdgeInsets.only(right: 10)),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Hai, Armin",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        "Bagaimana kondusu tubuhmu?",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      )
-                    ],
+          GestureDetector(
+            onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                builder: (BuildContext context) => new Akun())),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Color(0xff1DBAB5),
+                  borderRadius: BorderRadius.circular(10)),
+              height: 150,
+              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.all(10),
+              child: new Row(
+                children: [
+                  Image.asset(
+                    "images/profilePict.png",
+                    height: 70,
                   ),
-                ),
-              ],
+                  Padding(padding: EdgeInsets.only(right: 10)),
+                  Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Hai, Armin",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "Bagaimana kondusu tubuhmu?",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Row(
