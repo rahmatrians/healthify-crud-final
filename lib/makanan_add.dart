@@ -11,10 +11,11 @@ class _MakananAddState extends State<MakananAdd> {
   TextEditingController controllerDesc = new TextEditingController();
 
   void AddingData() {
-    http.post(Uri.parse("http://10.0.2.2/healthify/adddata.php"), body: {
-      'nama_makanan': controllerName.text,
-      'keterangan': controllerDesc.text,
-    });
+    http.post(Uri.parse("http://10.0.2.2/healthify/makanan_adddata.php"),
+        body: {
+          'nama_makanan': controllerName.text,
+          'keterangan': controllerDesc.text,
+        });
   }
 
   @override

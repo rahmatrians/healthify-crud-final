@@ -24,12 +24,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Future<List> getData() async {
-    final response =
-        await http.get(Uri.parse("http://10.0.2.2/healthify/getdata.php"));
-    return json.decode(response.body);
-  }
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

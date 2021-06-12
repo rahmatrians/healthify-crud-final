@@ -16,7 +16,7 @@ class MakananDetail extends StatefulWidget {
 
 class _MakananDetailState extends State<MakananDetail> {
   void deleteData() {
-    http.post(Uri.parse("http://10.0.2.2/healthify/deletedata.php"),
+    http.post(Uri.parse("http://10.0.2.2/healthify/makanan_deletedata.php"),
         body: {"id": widget.list[widget.index]['id']});
   }
 

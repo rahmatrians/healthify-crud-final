@@ -17,11 +17,12 @@ class _MakananEditState extends State<MakananEdit> {
   TextEditingController controllerDesc;
 
   void editData() {
-    http.post(Uri.parse("http://10.0.2.2/healthify/editdata.php"), body: {
-      "id": widget.list[widget.index]['id'],
-      "nama_makanan": controllerName.text,
-      "keterangan": controllerDesc.text,
-    });
+    http.post(Uri.parse("http://10.0.2.2/healthify/makanan_editdata.php"),
+        body: {
+          "id": widget.list[widget.index]['id'],
+          "nama_makanan": controllerName.text,
+          "keterangan": controllerDesc.text,
+        });
   }
 
   @override

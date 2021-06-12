@@ -81,7 +81,7 @@ class _ItemListState extends State<ItemList> {
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
                   ),
-                  leading: new Icon(Icons.local_dining),
+                  leading: new Icon(Icons.medical_services),
                   subtitle: Container(
                       padding: EdgeInsets.only(top: 15),
                       child: new Text("${widget.list[i]['keterangan']} ")),

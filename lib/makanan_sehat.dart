@@ -12,8 +12,8 @@ class MakananList extends StatefulWidget {
 
 class _MakananListState extends State<MakananList> {
   Future<List> getData() async {
-    final response =
-        await http.get(Uri.parse("http://10.0.2.2/healthify/getdata.php"));
+    final response = await http
+        .get(Uri.parse("http://10.0.2.2/healthify/makanan_getdata.php"));
     return json.decode(response.body);
   }
 
