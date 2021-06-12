@@ -108,8 +108,8 @@ class _MyAppState extends State<MyApp> {
                           child: Column(children: [
                             SizedBox(height: 10),
                             Image.asset(
-                              "images/profilePict.png",
-                              height: 70,
+                              "images/healthy-food.png",
+                              height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Makanan Sehat"),
@@ -133,8 +133,8 @@ class _MyAppState extends State<MyApp> {
                           child: Column(children: [
                             SizedBox(height: 10),
                             Image.asset(
-                              "images/profilePict.png",
-                              height: 70,
+                              "images/blog.png",
+                              height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Tips Sehat"),
@@ -162,8 +162,8 @@ class _MyAppState extends State<MyApp> {
                           child: Column(children: [
                             SizedBox(height: 10),
                             Image.asset(
-                              "images/profilePict.png",
-                              height: 70,
+                              "images/information.png",
+                              height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Tentang Kami"),
@@ -187,8 +187,8 @@ class _MyAppState extends State<MyApp> {
                           child: Column(children: [
                             SizedBox(height: 10),
                             Image.asset(
-                              "images/profilePict.png",
-                              height: 70,
+                              "images/phone.png",
+                              height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Info Layanan"),

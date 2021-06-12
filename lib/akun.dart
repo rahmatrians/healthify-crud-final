@@ -37,7 +37,7 @@ class _AkunState extends State<Akun> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 padding: EdgeInsets.all(20),
-                child: new Text("Nama : "),
+                child: new Text("Nama : Armin"),
               ),
               SizedBox(height: 10),
               new Container(
@@ -47,7 +47,7 @@ class _AkunState extends State<Akun> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 padding: EdgeInsets.all(20),
-                child: new Text("Tanggal Lahir : "),
+                child: new Text("Tanggal Lahir : 01 Januari 1999"),
               ),
               SizedBox(height: 10),
               new Container(
@@ -57,7 +57,7 @@ class _AkunState extends State<Akun> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 padding: EdgeInsets.all(20),
-                child: new Text("Kelamin : "),
+                child: new Text("Kelamin : Laki-laki"),
               ),
               SizedBox(height: 10),
             ],
